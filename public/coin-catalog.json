@@ -156,7 +156,7 @@
         { "id": "morgan-1893-s", "date": "1893", "mintMark": "S", "needed": 1, "found": 0 }
       ]
     },
-        {
+    {
       "id": "Washington-quarters",
       "title": "Washington Quarters",
       "description": "Quarters issued from 1968 through 1988.",
@@ -175,7 +175,7 @@
         { "id": "washington-1992-d", "date": "1992", "mintMark": "D", "needed": 1, "found": 0 },
         { "id": "washington-1993-d", "date": "1993", "mintMark": "D", "needed": 1, "found": 0 },
         { "id": "washington-1994-p", "date": "1994", "mintMark": "P", "needed": 1, "found": 0 },
-        { "id": "washington-1998-p", "date": "1998", "mintMark": "P", "needed": 1, "found": 0 },
+        { "id": "washington-1998-p", "date": "1998", "mintMark": "P", "needed": 1, "found": 0 }
       ]
     },
     {

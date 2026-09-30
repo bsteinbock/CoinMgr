@@ -39,8 +39,9 @@ GitHub Pages is static hosting and cannot write changes back to the repository. 
 
 ## Publish with GitHub Pages
 
-The workflow in `.github/workflows/deploy.yml` builds and publishes on pushes to `main`. In the repository settings, set **Pages** to **GitHub Actions**. The Vite configuration reads the repository name from GitHub Actions so project-site assets work under the repository path. Change the workflow branch if your default branch is not `main`.
+1. In the repository, open **Settings** → **Pages**.
+2. Under **Build and deployment**, set **Source** to **GitHub Actions**. This one-time setup is required because the deployment workflow cannot enable Pages through its Actions token.
+3. Push a commit to `main` to deploy automatically, or run **Deploy to GitHub Pages** from the **Actions** tab using **Run workflow**.
+4. After the deployment succeeds, open `https://bsteinbock.github.io/CoinMgr/`.
 
-```
-
-```
+The workflow in `.github/workflows/deploy.yml` builds and publishes the site. The Vite configuration reads the repository name from GitHub Actions so project-site assets work under the repository path. Change the workflow branch if your default branch is not `main`.

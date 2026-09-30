@@ -119,7 +119,7 @@ function App() {
         <section className="intro">
           <div>
             <h1>
-              Needed Coin Ledger<span className="title-period">.</span>
+              Needed Coins<span className="title-period">.</span>
             </h1>
           </div>
         </section>

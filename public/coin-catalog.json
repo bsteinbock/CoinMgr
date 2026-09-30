@@ -156,14 +156,43 @@
         { "id": "morgan-1893-s", "date": "1893", "mintMark": "S", "needed": 1, "found": 0 }
       ]
     },
+        {
+      "id": "Washington-quarters",
+      "title": "Washington Quarters",
+      "description": "Quarters issued from 1968 through 1988.",
+      "items": [
+        { "id": "washington-1968-d", "date": "1968", "mintMark": "D", "needed": 1, "found": 0 },
+        { "id": "washington-1969-p", "date": "1969", "mintMark": "P", "needed": 1, "found": 0 },
+        { "id": "washington-1969-d", "date": "1969", "mintMark": "D", "needed": 1, "found": 0 },
+        { "id": "washington-1970-p", "date": "1970", "mintMark": "P", "needed": 2, "found": 0 },
+        { "id": "washington-1971-p", "date": "1971", "mintMark": "P", "needed": 2, "found": 0 },
+        { "id": "washington-1972-p", "date": "1972", "mintMark": "P", "needed": 1, "found": 0 },
+        { "id": "washington-1972-d", "date": "1972", "mintMark": "D", "needed": 1, "found": 0 },
+        { "id": "washington-1977-d", "date": "1977", "mintMark": "D", "needed": 1, "found": 0 },
+        { "id": "washington-1982-p", "date": "1982", "mintMark": "P", "needed": 1, "found": 0 },
+        { "id": "washington-1990-d", "date": "1990", "mintMark": "D", "needed": 1, "found": 0 },
+        { "id": "washington-1991-d", "date": "1991", "mintMark": "D", "needed": 1, "found": 0 },
+        { "id": "washington-1992-d", "date": "1992", "mintMark": "D", "needed": 1, "found": 0 },
+        { "id": "washington-1993-d", "date": "1993", "mintMark": "D", "needed": 1, "found": 0 },
+        { "id": "washington-1994-p", "date": "1994", "mintMark": "P", "needed": 1, "found": 0 },
+        { "id": "washington-1998-p", "date": "1998", "mintMark": "P", "needed": 1, "found": 0 },
+      ]
+    },
     {
       "id": "proof-sets",
       "title": "U.S. Proof Sets",
       "description": "Complete annual sets, counted as one item each.",
       "items": [
-        { "id": "proof-sets-1999", "date": "1999", "mintMark": "N/A", "needed": 1, "found": 0 },
-        { "id": "proof-sets-2000", "date": "2000", "mintMark": "N/A", "needed": 1, "found": 0 },
-        { "id": "proof-sets-2024", "date": "2024", "mintMark": "N/A", "needed": 1, "found": 0 }
+        { "id": "proof-sets-1990", "date": "1990", "mintMark": "N/A", "needed": 1, "found": 0 },
+        { "id": "proof-sets-1997", "date": "1997", "mintMark": "N/A", "needed": 1, "found": 0 },
+        { "id": "proof-sets-2010", "date": "2010", "mintMark": "N/A", "needed": 1, "found": 0 },
+        { "id": "proof-sets-2011", "date": "2011", "mintMark": "N/A", "needed": 1, "found": 0 },
+        { "id": "proof-sets-2013", "date": "2013", "mintMark": "N/A", "needed": 1, "found": 0 },
+        { "id": "proof-sets-2015", "date": "2015", "mintMark": "N/A", "needed": 1, "found": 0 },
+        { "id": "proof-sets-2016", "date": "2016", "mintMark": "N/A", "needed": 1, "found": 0 },
+        { "id": "proof-sets-2017", "date": "2017", "mintMark": "N/A", "needed": 1, "found": 0 },
+        { "id": "proof-sets-2019", "date": "2019", "mintMark": "N/A", "needed": 1, "found": 0 },
+        { "id": "proof-sets-2021", "date": "2021", "mintMark": "N/A", "needed": 1, "found": 0 }
       ]
     }
   ]

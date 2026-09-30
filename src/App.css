@@ -399,6 +399,42 @@ h1 {
   font-weight: 700;
   letter-spacing: 1.1px;
 }
+.set-actions {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: end;
+  gap: 3px;
+}
+.set-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 2px 0;
+  border: 0;
+  background: transparent;
+  color: var(--forest);
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.set-toggle::after {
+  width: 6px;
+  height: 6px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  content: '';
+  transform: translateY(-2px) rotate(45deg);
+}
+.set-toggle[aria-expanded='true']::after {
+  transform: translateY(2px) rotate(225deg);
+}
+.set-toggle:hover {
+  text-decoration: underline;
+}
+.set-entries[hidden] {
+  display: none;
+}
 .column-head,
 .coin-row {
   display: grid;

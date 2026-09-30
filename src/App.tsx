@@ -46,6 +46,7 @@ function App() {
   const [loadError, setLoadError] = useState(false)
   const [foundCounts, setFoundCounts] = useState<Record<string, number>>(loadFoundCounts)
   const [filter, setFilter] = useState<ViewFilter>('all')
+  const [expandedSets, setExpandedSets] = useState<Record<string, boolean>>({})
 
   useEffect(() => {
     let active = true
@@ -119,7 +120,7 @@ function App() {
         <section className="intro">
           <div>
             <h1>
-              Needed Coins<span className="title-period">.</span>
+              Needed Coins
             </h1>
           </div>
         </section>
@@ -174,57 +175,76 @@ function App() {
                     <h2>{set.title}</h2>
                     {set.description && <p className="set-description">{set.description}</p>}
                   </div>
-                  <span className="set-progress">
-                    {setCompleted} / {set.items.length} COMPLETE
-                  </span>
+                  <div className="set-actions">
+                    <span className="set-progress">
+                      {setCompleted} / {set.items.length} COMPLETE
+                    </span>
+                    <button
+                      className="set-toggle"
+                      type="button"
+                      aria-expanded={Boolean(expandedSets[set.id])}
+                      aria-controls={`entries-${set.id}`}
+                      onClick={() =>
+                        setExpandedSets((sets) => ({ ...sets, [set.id]: !sets[set.id] }))
+                      }
+                    >
+                      {expandedSets[set.id] ? 'Collapse entries' : 'Expand entries'}
+                    </button>
+                  </div>
                 </div>
-                <div className="column-head" aria-hidden="true">
-                  <span>Date</span>
-                  <span>Mint</span>
-                  <span>Need</span>
-                  <span>Found</span>
-                </div>
-                <div className="coin-list" role="list">
-                  {set.items.map((item) => {
-                    const found = getFound(item)
-                    const isComplete = found >= item.needed
+                <div
+                  id={`entries-${set.id}`}
+                  className="set-entries"
+                  hidden={!expandedSets[set.id]}
+                >
+                  <div className="column-head" aria-hidden="true">
+                    <span>Date</span>
+                    <span>Mint</span>
+                    <span>Need</span>
+                    <span>Found</span>
+                  </div>
+                  <div className="coin-list" role="list">
+                    {set.items.map((item) => {
+                      const found = getFound(item)
+                      const isComplete = found >= item.needed
 
-                    return (
-                      <div
-                        className={`coin-row${isComplete ? ' is-complete' : ''}`}
-                        key={item.id}
-                        role="listitem"
-                      >
-                        <span className="coin-date">{item.date}</span>
-                        <span
-                          className={`mint-mark mint-${item.mintMark.replace('/', '').toLowerCase()}`}
+                      return (
+                        <div
+                          className={`coin-row${isComplete ? ' is-complete' : ''}`}
+                          key={item.id}
+                          role="listitem"
                         >
-                          {item.mintMark}
-                        </span>
-                        <span className="needed-count">{item.needed}</span>
-                        <div className="found-control">
-                          <button
-                            type="button"
-                            aria-label={`Decrease found count for ${item.date} ${item.mintMark}`}
-                            onClick={() => changeFound(item, -1)}
-                            disabled={found === 0}
+                          <span className="coin-date">{item.date}</span>
+                          <span
+                            className={`mint-mark mint-${item.mintMark.replace('/', '').toLowerCase()}`}
                           >
-                            −
-                          </button>
-                          <span className="found-value" aria-live="polite">
-                            {found}
+                            {item.mintMark}
                           </span>
-                          <button
-                            type="button"
-                            aria-label={`Increase found count for ${item.date} ${item.mintMark}`}
-                            onClick={() => changeFound(item, 1)}
-                          >
-                            +
-                          </button>
+                          <span className="needed-count">{item.needed}</span>
+                          <div className="found-control">
+                            <button
+                              type="button"
+                              aria-label={`Decrease found count for ${item.date} ${item.mintMark}`}
+                              onClick={() => changeFound(item, -1)}
+                              disabled={found === 0}
+                            >
+                              −
+                            </button>
+                            <span className="found-value" aria-live="polite">
+                              {found}
+                            </span>
+                            <button
+                              type="button"
+                              aria-label={`Increase found count for ${item.date} ${item.mintMark}`}
+                              onClick={() => changeFound(item, 1)}
+                            >
+                              +
+                            </button>
+                          </div>
                         </div>
-                      </div>
-                    )
-                  })}
+                      )
+                    })}
+                  </div>
                 </div>
               </section>
             )

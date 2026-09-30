@@ -1,0 +1,43 @@
+{
+  "sets": [
+    {
+      "id": "wheat-pennies",
+      "title": "Wheat Pennies",
+      "description": "Lincoln cents issued from 1909 through 1958.",
+      "items": [
+        { "id": "wheat-1909-p", "date": "1909", "mintMark": "P", "needed": 1, "found": 0 },
+        { "id": "wheat-1909-d", "date": "1909", "mintMark": "D", "needed": 1, "found": 0 },
+        { "id": "wheat-1909-s", "date": "1909", "mintMark": "S", "needed": 1, "found": 0 },
+        { "id": "wheat-1914-d", "date": "1914", "mintMark": "D", "needed": 1, "found": 0 },
+        { "id": "wheat-1922-d", "date": "1922", "mintMark": "D", "needed": 1, "found": 0 },
+        { "id": "wheat-1931-s", "date": "1931", "mintMark": "S", "needed": 1, "found": 0 },
+        { "id": "wheat-1943-p", "date": "1943", "mintMark": "P", "needed": 1, "found": 0 },
+        { "id": "wheat-1943-d", "date": "1943", "mintMark": "D", "needed": 1, "found": 0 },
+        { "id": "wheat-1943-s", "date": "1943", "mintMark": "S", "needed": 1, "found": 0 },
+        { "id": "wheat-1955-p", "date": "1955", "mintMark": "P", "needed": 1, "found": 0 },
+        { "id": "wheat-1958-p", "date": "1958", "mintMark": "P", "needed": 1, "found": 0 }
+      ]
+    },
+    {
+      "id": "morgan-dollars",
+      "title": "Morgan Dollars",
+      "description": "A sample date-and-mint run; extend it to match your album.",
+      "items": [
+        { "id": "morgan-1878-p", "date": "1878", "mintMark": "P", "needed": 1, "found": 0 },
+        { "id": "morgan-1881-s", "date": "1881", "mintMark": "S", "needed": 1, "found": 0 },
+        { "id": "morgan-1889-cc", "date": "1889", "mintMark": "N/A", "needed": 1, "found": 0 },
+        { "id": "morgan-1893-s", "date": "1893", "mintMark": "S", "needed": 1, "found": 0 }
+      ]
+    },
+    {
+      "id": "proof-sets",
+      "title": "U.S. Proof Sets",
+      "description": "Complete annual sets, counted as one item each.",
+      "items": [
+        { "id": "proof-sets-1999", "date": "1999", "mintMark": "N/A", "needed": 1, "found": 0 },
+        { "id": "proof-sets-2000", "date": "2000", "mintMark": "N/A", "needed": 1, "found": 0 },
+        { "id": "proof-sets-2024", "date": "2024", "mintMark": "N/A", "needed": 1, "found": 0 }
+      ]
+    }
+  ]
+}

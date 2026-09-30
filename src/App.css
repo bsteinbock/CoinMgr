@@ -340,7 +340,7 @@ h1 {
 .collection-tools {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   gap: 18px;
   padding: 22px 0;
 }
@@ -559,17 +559,26 @@ a:focus-visible {
     font-size: 46px;
   }
   .collection-tools {
-    align-items: stretch;
-    flex-direction: column;
-    gap: 11px;
+    align-items: center;
+    gap: 8px;
     padding: 17px 0 10px;
   }
   .filter-tabs {
-    justify-content: stretch;
+    flex: 1;
+    min-width: 0;
   }
   .filter-tabs button {
     flex: 1;
-    padding-inline: 6px;
+    min-width: 0;
+    padding-inline: 3px;
+    font-size: 10px;
+    white-space: nowrap;
+  }
+  .export-button {
+    min-height: 38px;
+    padding-inline: 9px;
+    font-size: 10px;
+    white-space: nowrap;
   }
   .set-heading h2 {
     font-size: 23px;

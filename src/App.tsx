@@ -115,40 +115,16 @@ function App() {
 
   return (
     <div className="app-shell">
-      <header className="masthead">
-        <a className="brand" href={import.meta.env.BASE_URL} aria-label="Coin Ledger home">
-          <span className="brand-coin" aria-hidden="true">
-            C
-          </span>
-          <span>
-            FIELD NOTES <span className="brand-divider">/</span> NUMISMATICS
-          </span>
-        </a>
-        <span className="edition-label">PERSONAL COLLECTION · EST. 2026</span>
-      </header>
-
       <main>
         <section className="intro">
           <div>
-            <p className="eyebrow">
-              YOUR COLLECTION <span>NO. 01</span>
-            </p>
             <h1>
-              The coin ledger<span className="title-period">.</span>
+              Needed Coin Ledger<span className="title-period">.</span>
             </h1>
-            <p className="intro-copy">Every date, every mint mark, one satisfying list.</p>
           </div>
-          <button
-            className="export-button"
-            type="button"
-            onClick={exportProgress}
-            disabled={!catalog}
-          >
-            Export progress
-          </button>
         </section>
 
-        <section className="collection-tools" aria-label="Filter collection entries">
+        <section className="collection-tools" aria-label="Collection controls">
           <div className="filter-tabs" role="group" aria-label="Filter entries">
             {(['all', 'needed', 'complete'] as const).map((option) => (
               <button
@@ -166,6 +142,14 @@ function App() {
               </button>
             ))}
           </div>
+          <button
+            className="export-button"
+            type="button"
+            onClick={exportProgress}
+            disabled={!catalog}
+          >
+            Export progress
+          </button>
         </section>
 
         {loadError && (
